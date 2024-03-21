@@ -1,4 +1,6 @@
-import { Schema, model } from "mongoose";
+
+import mongoose from "mongoose";
+const  { Schema, model } = mongoose;
 
 const postSchema = new Schema({
     title: {
@@ -33,5 +35,4 @@ const postSchema = new Schema({
     }
 });
 
-const Post = model('Post', postSchema);
-module.exports = { Post };
+export const Post = mongoose.model('Post', postSchema);
